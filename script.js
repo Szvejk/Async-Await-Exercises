@@ -21,10 +21,12 @@
 // 	console.log(data)
 // })
 
+
+
 // B
 
 // async function getData("https://api.thecatapi.com/v1/breeds") {
-// 	const countriesAPI = await fetch("https://api.thecatapi.com/v1/breeds")
+// 	const catAPI = await fetch("https://api.thecatapi.com/v1/breeds")
 // const data = await response.json()
 // return data
 // }
