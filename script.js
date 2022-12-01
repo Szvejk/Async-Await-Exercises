@@ -95,3 +95,20 @@
 // 	console.log(result)
 // })
 
+// ZADANIE 4
+// async function API ("https://fakerapi.it/api/v1/persons?_quantity=") {
+// 	const peopleAPI = await fetch("https://fakerapi.it/api/v1/persons?_quantity=")
+// const data = await response.json()
+// return data
+// }
+// async function getMoreData(){
+// 	const people = await API("https://api.thecatapi.com/v1/breeds")
+// 	return people
+// }
+// let info = data.map(function(data) {
+// 	let information = data.slice(0,10)
+// } 
+
+// getMoreData().then(data =>{
+// 	console.log(information)
+
