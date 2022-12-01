@@ -75,5 +75,23 @@
 // }
 
 // ZADANIE 3 
+// async function job(result, database, errorManager) {
+//     return result
 
+//     await(function(id) {
+//         return database.get(id);
+//     })
+
+//     await(function(info) {
+//         return info.name;
+//     })
+
+//     .catch(function(error) {
+//         errorManager.notify(error);
+//         throw error;
+//     });
+// }
+// job().then(result => {
+// 	console.log(result)
+// })
 
