@@ -62,3 +62,18 @@
 // 	console.log(data)
 // })
 // f(getData).catch(alert);
+
+// ZADANIE 2
+// function job() {
+//     return 'hello world';
+// }
+// let job = () => {
+// let promise = new Promise(resolve, reject) 
+// 	setTimeout(() => resolve("hello world"),
+// 	2000);
+// 	reject("it's not working...")
+// }
+
+// ZADANIE 3 
+
+
