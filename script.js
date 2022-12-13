@@ -1,4 +1,3 @@
-
 // async function getData(url){
 //     const response=await fetch(url)
 //     if(response.ok){
@@ -36,104 +35,17 @@
 // }
 // }
 
-// zad1(3)
-
-
-// ZADANIE 1
-// async function getData("https://restcountries.com/v3.1/all") {
-// 	const countriesAPI = await fetch("https://restcountries.com/v3.1/all")
-// const data = await response.json()
-// return data
-// }
-// async function getMoreData(){
-// 	const countries = await getData("https://restcountries.com/v3.1/all")
-// 	const cats = await getData("https://api.thecatapi.com/v1/breeds")
-// 	return data;
-// }
-// const variables = data.map(function(data){
-// return `Panstwo: ${el.Panstwo} ${el.Stolica} ${el.Powierzchnia} ${el.Języki Urzędowe} ${el.Populacja}`
-// 	});
-
-// 	getMoreData().then(data =>{
-// 	console.log(data)
-// })
-
-
-
-// B
-
-// async function getData("https://api.thecatapi.com/v1/breeds") {
-// 	const catAPI = await fetch("https://api.thecatapi.com/v1/breeds")
-// const data = await response.json()
-// return data
-// }
-// async function getMoreData(){
-// 	const cats = await getData("https://api.thecatapi.com/v1/breeds")
-// const variables = cats.map(cat => name)
-// }
-// getMoreData().then(data =>{
-// 	console.log(data)
-// })
-
-
-
-
-
-
-// C
-// async function getData("https://restcountries.com/v3.1/all"){
-	
-// / 	const countriesAPI = await fetch("https://restcountries.com/v3.1/all")
-// // const data = await response.json()
-// // return data }
-// // async function getMoreData(){
-// // 	const countries = await getData("https://restcountries.com/v3.1/all")
-// / 	return data
-// // }
-// const variables = arr.map(function(data){
-// // let area  = data.sort((a,b) => a.powierzchnia - b.powierzchnia
-// // console.log(area)
-
-// // let population  = data.sort((a,b) => b-a). slice (0,1)
-// // console.log(population)
-// })
-// getMoreData().then(data=>{
-// 	console.log(data)
-// })
-// f(getData).catch(alert);
-
 // ZADANIE 2
 // function job() {
 //     return 'hello world';
 // }
 // let job = () => {
-// let promise = new Promise(resolve, reject) 
+// let promise = new Promise(resolve, reject)
 // 	setTimeout(() => resolve("hello world"),
 // 	2000);
 // 	reject("it's not working...")
 // }
 //  return job
-
-// ZADANIE 3 
-// async function job(result, database, errorManager) {
-//   
-
-//     await(function(id) {
-//         return database.get(id);
-//     })
-
-//     await(function(info) {
-//         return info.name;
-//     })
-
-//     .catch(function(error) {
-//         errorManager.notify(error);
-//         throw error;
-//     });
-// }
-// job().then(result => {
-// 	console.log(result)
-// })
 
 // ZADANIE 4
 // async function API(quantity) {
@@ -142,25 +54,189 @@
 // return data
 // }
 
-// function sum(a,b) {
-//     return a+b;
+// getData("https://fakerapi.it/api/v1/persons?_quantity=10").then((persons)=>{
+//     console.log(persons.data)
+//     persons.data.forEach(element => {
+//         const p=document.createElement("p")
+//         p.textContent=`${element.firstname} ${element.lastname}`
+//         document.body.appendChild(p)
+//         const img=document.createElement("img"); Ss
+//         //  tu tworze element
+//         img.src=element.image
+//         document.body.appendChild(img)
+//         // tu go dodaje do htmlSS
+//     });
+// })S
+
+// zadanie 5
+
+// async function getData(users) {
+// 	const userAPI = await fetch('https://jsonplaceholder.typicode.com/users');
+// 	const data = await userAPI.json();
+// 	return data;
 // }
-// sum(2,4)
 
-// zadanie 4
-getData("https://fakerapi.it/api/v1/persons?_quantity=10").then((persons)=>{
-    console.log(persons.data)
-    persons.data.forEach(element => {
-        const p=document.createElement("p")
-        p.textContent=`${element.firstname} ${element.lastname}`
-        document.body.appendChild(p)
-        const img=document.createElement("img"); 
-        //  tu tworze element
-        img.src=element.image
-        document.body.appendChild(img)
-        // tu go dodaje do html
-    });
+// getData('https://jsonplaceholder.typicode.com/users').then((users) => {
+// 	console.log(users);
+// 	users.forEach((element) => {
+// 		const card = document.createElement('div');
+// 		card.innerHTML = `${element.name} ${element.username} ${element.email} ${element.address.city} ${element.address.zipcode} ${element.address.street}`;
+// 		document.body.appendChild(card);
+// 	});
+// });
+
+// zadanie 2 zadania ze slacka
+// async function API() {
+// 	const peopleAPI = await fetch(
+// 		'https://api.adviceslip.com/advice'
+// 	);
+// 	const data = await peopleAPI.json();
+// 	return data;
+ 
+// }
+// API().then(data =>{
+//     console.log(data.slip.advice)
+// })
+
+// zadanie 4a ze slacka
+// async function getData() {
+//     const response = await fetch("https://restcountries.com/v3.1/all")
+//     const data = await response.json()
+//     return data
+// }
+// const arrayOfcurrencies = []
+// getData("https://restcountries.com/v3.1/all").then(countries=>{
+//     console.log(countries)
+//  const countriesWithEuro=countries.filter(el=>{
+//     if(el.currencies){
+//         return Object.keys(el.currencies).includes("EUR")
+//     }
+//  })
+//  console.log(countriesWithEuro)
+//  console.log(countriesWithEuro.length)
+// const groupBy = (arrayOfcurriences, euro) => {
+//     return arrayOfcurriences.reduce((result, currentValue) => {
+//         (result[currenValue[euro]] = result[currentValue[euro]] || []).push(currentValue);
+//         return result;
+//     },{});
+// const curriencesByeuro = groupBy(currencies,euro)
+
+//}
+// })
+// })
+// zadanie 4 punkt b
+// async function getData() {
+//     const response = await fetch("https://restcountries.com/v3.1/all")
+//     const data = await response.json()
+//     return data
+// }
+// getData().then( data => {
+//     const countriesWithoutCapital=data.forEach(el=>{
+//     if(el.capital === undefined) {
+//         console.log(el.name.common)
+//     }
+        
+//     })
+    
+// })
+
+// 4c
+async function getData() {
+    const response = await fetch("https://restcountries.com/v3.1/all")
+    const data = await response.json()
+    return data
+}
+
+const groupBy = (groupByContinent, key) => {
+
+    return groupByContinent.reduce((result, currentValue) => {
+      (result[currentValue[key]] = result[currentValue[key]] || []).push(
+        currentValue
+      );
+
+      return result;
+    }, {});
+  };
+getData().then(data=>{
+    const groupedByContinents=groupBy(data,'continents')
+    const leng=Object.entries(groupedByContinents).map(el=>{
+        return [el[0], el[1].length]
+    })
+    const sorted=leng.sort((a,b)=>a[1]-b[1])
+    console.log(sorted)
 })
+//  const groupedByContinent = groupBy(continents);
+
+// // zadanie 4 punkt d
+
+//  groupedByContinent.forEach(e =>{
+//     console.log(e.region)
+// })
+/*const = groupedByContinent.sort((a,b)=>a.region-b.region)
+console.log( groupedByContinent.slice(sortedByRegion.length-11,sortedByRegion.length-1))
+console.log('Kontynenty które maja najwiecej państw')
+console.log( groupedByContinent.slice(sortedByRegion.length -0,sortedByRegion.length -10))
+console.log("To są kontynenty które maja najmniej panstw")
+})*/
+
+//4. e
+
+// zsumuj popuacje krajów na danych kontynentach
+
+// groupedByContinents
+// object entries -> reduce ->
 
 
 
+
+// f
+
+// g, h, i
+
+// zadanie 4g (najwieksza i najmniejsza powierzchnia)
+
+// async function getData(url){
+//     const response=await fetch(url)
+//     if(response.ok){
+//         const data=await response.json()
+//         return data;
+//     }
+// }
+// getData("https://restcountries.com/v3.1/all").then(continents=>{
+
+// // //  groupedByContinent.forEach(continents =>{
+// // //     console.log(continent.area)
+// // // })
+// // const sortedBy= groupedByContinent.sort((a,b)=>a.area-b.area)
+// // console.log( groupedByContinent.slice(sortedBy.length-11,sortedBy.length-1))
+// // console.log(Kontynenty które maja najwiekszą powierzchnię)
+// // console.log( groupedByContinent.slice(sortedBy.length -0,sortedBy.length -10))
+// // console.log("To są kontynenty które maja najmniejszą powierzchnię")
+// // })
+
+// h
+// wyswietl nazwy kontynentow o najwiekszej i najmniejszej populacji
+
+// // const sortedBy= groupedByContinent.sort((a,b)=>a.population-b.population)
+// // console.log( groupedByContinent.slice(sortedBy.length-11,sortedBy.length-1))
+// // console.log(Kontynenty o największej populacji)
+// // console.log( groupedByContinent.slice(sortedBy.length -0,sortedBy.length -10))
+// // console.log("To są kontynenty o najmniejszej populacji")
+// // })
+
+// i posortuj waluty alfabetycznie
+
+// async function getData(url){
+//     const response=await fetch(url)
+//     if(response.ok){
+//         const data=await response.json()
+//         return data;
+//     }
+// }
+// getData("https://restcountries.com/v3.1/all").then(continents=>{
+
+// // //  groupedByContinent.forEach(countries =>{
+// // //     console.log(countries.currencies)
+
+// // // })
+// let sortedCurriences = curriences.sort()
